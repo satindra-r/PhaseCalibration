@@ -4,7 +4,6 @@ import scipy
 import scipy as sp
 import soundfile as sf
 
-
 def analyze_and_reconstruct(input, f_cut, st, times, timee, count, out):
 	data, sample_rate = sf.read(input)
 	if timee >= 0:
@@ -46,7 +45,7 @@ def analyze_and_reconstruct(input, f_cut, st, times, timee, count, out):
 			f, m, p = fourier[j]
 			m = m / samples
 			file.write(f"{j}\t{f:5.0f}\t{m:.8f}\t{p:.8f}\n")
-			coeffs_reconstructed[int(round(f * samples / sample_rate))] = A_max * m * samples * np.exp(1j * p)
+			coeffs_reconstructed[int(round(f * samples / sample_rate))] += A_max * m * samples * np.exp(1j * p)
 		reconstructed = np.concatenate([reconstructed, scipy.fft.irfft(coeffs_reconstructed, n=samples)])
 		file.close()
 	sf.write(out, reconstructed, sample_rate)
