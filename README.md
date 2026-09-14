@@ -5,4 +5,4 @@ Simply run the python file to generate the short time fourier coefficients that 
 The Desmos side of this project works by calibrating the phases of each tone by exploiting the inner workings of the WebAudio API.
 Now anyone can play quality audio on Desmos
 
-Know more about how it works: https://satindra-r.github.io/blog/phaseCallibration.html
+Know more about how it works: https://satindra-r.github.io/blog/phaseCalibration.html

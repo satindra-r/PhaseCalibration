@@ -9,12 +9,12 @@ import helpers as helper
 # meta settings
 HANN_VERSION = True
 OUTPUT_AS_LIST = True
-INPUT_FILE = "db.wav"
+INPUT_FILE = "audio/db.wav"
 TIME_START = 0  # start time of audio
 TIME_END = -1  # end time of audio, leave -1 for no clipping
 SAMPLE_DIR = "./samples"  # folder to write freqs to
 WRITE_PRECISION = 3  # precision of magnitude and phase in output
-RECONSTRUCTED_FILE = "reconstructed.wav"  # file to write reconstructed audio
+RECONSTRUCTED_FILE = "audio/reconstructed.wav"  # file to write reconstructed audio
 RECONSTRUCT_AUDIO_FILE = True
 PLOT_AUDIO = True
 
